@@ -1,9 +1,19 @@
-import { Box, Radio, Slider, Typography } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Slider,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
+import { pink } from "@mui/material/colors";
 
 // React Icon
 import { BsSunrise, BsSunset } from "react-icons/bs";
 import { MdOutlineWbSunny } from "react-icons/md";
+import SimilerLeftSection from "../similerLeftSection/similerLeftSection";
 
 function valueLabelFormat(value) {
   let scaledValue = value;
@@ -75,7 +85,7 @@ const LeftSideFilter = () => {
           </Typography>
 
           {/* Slider */}
-          <Box sx={{ width: '80%' }}>
+          <Box sx={{ width: "90%" }}>
             <Slider
               value={value}
               min={2000}
@@ -146,23 +156,11 @@ const LeftSideFilter = () => {
 
       {/* Stop section */}
       <Box>
-        <Typography variant="h6">
-          <p className="font-medium">Stop From Dhaka</p>
-        </Typography>
-
-        <div className="flex items-center justify-between mt-3 text-gray-400">
-          <div className="flex items-center">
-            <Radio />
-            <label>
-              <Typography variant="h6">
-                <p>Non Stop (15)</p>
-              </Typography>
-            </label>
-          </div>
-          <Typography variant="h6">
-            <p>BDT 3,050</p>
-          </Typography>
-        </div>
+        <SimilerLeftSection
+          heading={"Stop From Dhaka"}
+          title={"Non Stop (15)"}
+          price={"BDT 3,050"}
+        />
       </Box>
 
       <div className="my-5 border">
@@ -171,20 +169,10 @@ const LeftSideFilter = () => {
 
       {/* Baggage Allowance section */}
       <Box>
-        <Typography variant="h6">
-          <p className="font-medium">Check in Baggage Allowance</p>
-        </Typography>
-
-        <div className="mt-3 text-gray-400">
-          <div className="flex items-center">
-            <Radio />
-            <label>
-              <Typography variant="h6">
-                <p>20 KG (15)</p>
-              </Typography>
-            </label>
-          </div>
-        </div>
+        <SimilerLeftSection
+          heading={"Check in Baggage Allowance"}
+          title={"20 KG (15)"}
+        />
       </Box>
 
       <div className="my-5 border">
@@ -193,20 +181,10 @@ const LeftSideFilter = () => {
 
       {/* Refund section */}
       <Box>
-        <Typography variant="h6">
-          <p className="font-medium">Refundable</p>
-        </Typography>
-
-        <div className="mt-3 text-gray-400">
-          <div className="flex items-center">
-            <Radio />
-            <label>
-              <Typography variant="h6">
-                <p>Partially Refundable (15)</p>
-              </Typography>
-            </label>
-          </div>
-        </div>
+        <SimilerLeftSection
+          heading={"Refundable"}
+          title={"Partially Refundable (15)"}
+        />
       </Box>
 
       <div className="my-5 border">
@@ -216,36 +194,10 @@ const LeftSideFilter = () => {
       {/* Departing or arriving section */}
       <Box className="flex justify-start gap-20 items-center">
         <div>
-          <Typography variant="h6">
-            <p className="font-medium">Departing from</p>
-          </Typography>
-
-          <div className="mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>DAC</p>
-                </Typography>
-              </label>
-            </div>
-          </div>
+          <SimilerLeftSection heading={"Departing from"} title={"DAC"} />
         </div>
         <div>
-          <Typography variant="h6">
-            <p className="font-medium">Arriving at</p>
-          </Typography>
-
-          <div className="mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>CGP</p>
-                </Typography>
-              </label>
-            </div>
-          </div>
+          <SimilerLeftSection heading={"Arriving at"} title={"CGP"} />
         </div>
       </Box>
 
@@ -261,62 +213,98 @@ const LeftSideFilter = () => {
           </Typography>
         </div>
         <div>
-          {/* Biman Bagladesh */}
-          <div className="flex items-center justify-between mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>Biman Bangladesh Airlines</p>
-                </Typography>
-              </label>
-            </div>
-            <Typography variant="h6">
-              <p>BDT 3,050</p>
-            </Typography>
-          </div>
-          {/* Us Bangla */}
-          <div className="flex items-center justify-between mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>US Bangla Airlibes</p>
-                </Typography>
-              </label>
-            </div>
-            <Typography variant="h6">
-              <p>BDT 4,050</p>
-            </Typography>
-          </div>
-          {/* Air astra */}
-          <div className="flex items-center justify-between mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>Air Astra</p>
-                </Typography>
-              </label>
-            </div>
-            <Typography variant="h6">
-              <p>BDT 6,050</p>
-            </Typography>
-          </div>
-          {/* Novo Air */}
-          <div className="flex items-center justify-between mt-3 text-gray-400">
-            <div className="flex items-center">
-              <Radio />
-              <label>
-                <Typography variant="h6">
-                  <p>Novo Air</p>
-                </Typography>
-              </label>
-            </div>
-            <Typography variant="h6">
-              <p>BDT 4,550</p>
-            </Typography>
-          </div>
+          <FormControl sx={{ width: "100%" }}>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="Biman Bangladesh Airlines"
+              name="radio-buttons-group"
+            >
+              <div className="flex justify-between items-center">
+                <FormControlLabel
+                  value="Biman Bangladesh Airlines"
+                  control={
+                    <Radio
+                      sx={{
+                        color: pink[800],
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                      }}
+                    />
+                  }
+                  label="Biman Bangladesh Airlines"
+                />
+                <label>
+                  <Typography variant="h6">
+                    <p className="text-gray-500">BDT 3,020</p>
+                  </Typography>
+                </label>
+              </div>
+              <div className="flex justify-between items-center">
+                <FormControlLabel
+                  value="US Bangla Airlines"
+                  control={
+                    <Radio
+                      sx={{
+                        color: pink[800],
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                      }}
+                    />
+                  }
+                  label="US Bangla Airlines"
+                />
+                <label>
+                  <Typography variant="h6">
+                    <p className="text-gray-500">BDT 5,600</p>
+                  </Typography>
+                </label>
+              </div>
+              <div className="flex justify-between items-center">
+                <FormControlLabel
+                  value="AirAstra"
+                  control={
+                    <Radio
+                      sx={{
+                        color: pink[800],
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                      }}
+                    />
+                  }
+                  label="AirAstra"
+                />
+                <label>
+                  <Typography variant="h6">
+                    <p className="text-gray-500">BDT 6,000</p>
+                  </Typography>
+                </label>
+              </div>
+              <div className="flex justify-between items-center">
+                <FormControlLabel
+                  value="NovoAir"
+                  control={
+                    <Radio
+                      sx={{
+                        color: pink[800],
+                        "&.Mui-checked": {
+                          color: pink[600],
+                        },
+                      }}
+                    />
+                  }
+                  label="NovoAir"
+                />
+                <label>
+                  <Typography variant="h6">
+                    <p className="text-gray-500">BDT 2,500</p>
+                  </Typography>
+                </label>
+              </div>
+            </RadioGroup>
+          </FormControl>
         </div>
       </Box>
 
@@ -324,28 +312,17 @@ const LeftSideFilter = () => {
         <hr />
       </div>
 
-
       <Box>
-      <div>
-          <Typography variant="h6">
-            <p className="font-medium">Trabsit Time in (Dhaka - Chittagong)</p>
-          </Typography>
-        </div>
-        <div className="mt-3 text-gray-400">
-          <div className="flex items-center">
-            <Radio />
-            <label>
-              <Typography variant="h6">
-                <p>No Transit (15)</p>
-              </Typography>
-            </label>
-          </div>
-        </div>
+        <SimilerLeftSection
+          heading={"Trabsit Time in (Dhaka - Chittagong)"}
+          title={"No Transit (15)"}
+        />
       </Box>
 
-
       {/* Button Section */}
-      <button className="border border-red-500 w-full py-4 rounded-lg text-red-500 font-medium my-10 text-xl hover:bg-red-500 hover:text-white duration-500">Clear Filter</button>
+      <button className="border border-red-500 w-full py-4 rounded-lg text-red-500 font-medium my-10 text-xl hover:bg-red-500 hover:text-white duration-500">
+        Clear Filter
+      </button>
     </Box>
   );
 };

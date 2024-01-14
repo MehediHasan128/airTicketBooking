@@ -47,26 +47,31 @@ const AirlinesTicket = () => {
       <Box className="space-y-5">
         <TicketCard
           ticketPrice={"3,202"}
+          airliensName={'Biman Bangladesh Airlines'}
           airlineLogo={biman}
           time={"45 minutes"}
         />
         <TicketCard
           ticketPrice={"4,502"}
+          airliensName={'Biman Bangladesh Airlines'}
           airlineLogo={biman}
           time={"45 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
+          airliensName={'US Bangla Airlines'}
           airlineLogo={usBangla}
           time={"1 hour 20 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
+          airliensName={'AirAstra'}
           airlineLogo={airAstra}
           time={"1 hour 20 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
+          airliensName={'NovoAir'}
           airlineLogo={novo}
           time={"1 hour 20 minutes"}
         />

@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const TicketCard = ({ticketPrice, airlineLogo, time}) => {
+const TicketCard = ({ticketPrice, airliensName, airlineLogo, time}) => {
     return (
         <>
            <Box className="flex justify-between bg-white p-5 rounded-lg shadow-xl">
@@ -11,7 +11,7 @@ const TicketCard = ({ticketPrice, airlineLogo, time}) => {
             <img className="w-[30%]" src={airlineLogo} alt="" />
             <Typography variant="caption text">
               <p className="font-semibold text-gray-400">
-                Biman Bangladesh Airlines
+                {airliensName}
               </p>
             </Typography>
           </div>
