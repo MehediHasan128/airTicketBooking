@@ -8,9 +8,8 @@ const Home = () => {
   return (
     <div className="bg-slate-50 min-h-screen">
       <Navbar />
-      <div className="max-w-[1280px] mx-auto my-5">
+      <div className="max-w-[1450px] mx-auto my-5">
         <TopFilter />
-
         <main>
           <div className="flex gap-5 mt-16">
             {/* left side filter */}
