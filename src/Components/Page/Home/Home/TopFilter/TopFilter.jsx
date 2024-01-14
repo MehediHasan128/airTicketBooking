@@ -15,7 +15,7 @@ const TopFilter = () => {
   return (
     <div>
       <>
-        <Box className="bg-white px-10 py-3 rounded-xl shadow-md">
+        <Box className="bg-white px-10 py-3 rounded-xl shadow-md relative">
             {/* Radio group section */}
           <Box>
             <FormControl>
@@ -195,6 +195,10 @@ const TopFilter = () => {
                 </RadioGroup>
               </FormControl>
             </div>
+          </Box>
+
+          <Box className="absolute left-[42%] -bottom-6">
+          <button className="px-5 py-3 bg-red-600 rounded-md text-lg font-medium text-white">Modify Search</button>
           </Box>
         </Box>
       </>
