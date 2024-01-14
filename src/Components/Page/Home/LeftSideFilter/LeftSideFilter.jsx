@@ -1,26 +1,25 @@
 import { Box, Slider, Typography } from "@mui/material";
 import { useState } from "react";
 
+// React Icon
+import { BsSunrise, BsSunset } from "react-icons/bs";
+import { MdOutlineWbSunny } from "react-icons/md";
 
 function valueLabelFormat(value) {
-  
-    let scaledValue = value;
-  
-  
-    return `${scaledValue}`;
-  }
-  
-  function calculateValue(value) {
-    return value;
-  }
+  let scaledValue = value;
 
+  return `${scaledValue}`;
+}
+
+function calculateValue(value) {
+  return value;
+}
 
 const LeftSideFilter = () => {
-
-    const [value, setValue] = useState(3500);
+  const [value, setValue] = useState(3500);
 
   const handleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
+    if (typeof newValue === "number") {
       setValue(newValue);
     }
   };
@@ -70,12 +69,12 @@ const LeftSideFilter = () => {
       {/* Price Section */}
       <Box>
         <div>
-            {/* Slider text */}
+          {/* Slider text */}
           <Typography variant="h5">
             <p className="font-medium">One way Price</p>
           </Typography>
 
-            {/* Slider */}
+          {/* Slider */}
           <Box sx={{ width: 250 }}>
             <Slider
               value={value}
@@ -91,10 +90,54 @@ const LeftSideFilter = () => {
               aria-labelledby="non-linear-slider"
             />
             <Typography variant="body1" id="non-linear-slider" gutterBottom>
-              <p className="font-semibold">2,500 Taka - {valueLabelFormat(calculateValue(value))} Taka</p>
+              <p className="font-semibold">
+                2,500 Taka - {valueLabelFormat(calculateValue(value))} Taka
+              </p>
             </Typography>
           </Box>
         </div>
+      </Box>
+
+      <div className="my-8 border">
+        <hr />
+      </div>
+
+      {/* Departure Time */}
+      <Box>
+        <Typography variant="h5">
+          <p className="font-medium">Departure time in Dhaka</p>
+        </Typography>
+
+        {/* Departue Box */}
+        <Box className="mt-5 flex flex-wrap gap-5">
+            <div className="text-center border-2 border-black w-fit p-5 rounded-lg shadow-lg">
+                <BsSunrise className="text-3xl w-fit mx-auto" />
+                <Typography variant="body1">
+                    <p className="font-semibold">Morning</p>
+                </Typography>
+                <Typography variant="body2">
+                    <p>06:00-11:59 (5)</p>
+                </Typography>
+            </div>
+            <div className="text-center border-2 border-black w-fit p-5 rounded-lg shadow-lg">
+                <MdOutlineWbSunny className="text-3xl w-fit mx-auto" />
+                <Typography variant="body1">
+                    <p className="font-semibold">After Noon</p>
+                </Typography>
+                <Typography variant="body2">
+                    <p>12:00-17:59 (5)</p>
+                </Typography>
+            </div>
+            <div className="text-center border-2 border-black w-fit p-5 rounded-lg shadow-lg">
+                <BsSunset className="text-3xl w-fit mx-auto" />
+                <Typography variant="body1">
+                    <p className="font-semibold">Evening</p>
+                </Typography>
+                <Typography variant="body2">
+                    <p>18:00-23:59 (7)</p>
+                </Typography>
+            </div>
+        </Box>
       </Box>
     </Box>
   );

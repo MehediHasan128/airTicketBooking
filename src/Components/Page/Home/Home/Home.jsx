@@ -10,9 +10,9 @@ const Home = () => {
         <TopFilter />
         
         <main>
-            <div className="flex gap-10 border mt-10">
+            <div className="flex gap-10 mt-10">
                 {/* left side filter */}
-                <div className="w-[30%] bg-white rounded-xl p-5 border border-red-600">
+                <div className="w-[30%] bg-white rounded-xl p-5 shadow-md">
                     <LeftSideFilter />
                 </div>
 
