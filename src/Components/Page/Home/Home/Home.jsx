@@ -1,10 +1,13 @@
 import Navbar from "../../Navbar/Navbar";
+import TopFilter from "./TopFilter/TopFilter";
 
 const Home = () => {
     return (
-        <div>
+        <div className="bg-slate-50 min-h-screen">
             <Navbar />
-            <h1>This is Home</h1>
+            <div className="max-w-[1440px] mx-auto">
+            <TopFilter />
+            </div>
         </div>
     );
 };
