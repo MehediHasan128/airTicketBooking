@@ -1,4 +1,4 @@
-import { Box, FormControlLabel, Radio, Slider, Typography } from "@mui/material";
+import { Box, Radio, Slider, Typography } from "@mui/material";
 import { useState } from "react";
 
 // React Icon
@@ -75,7 +75,7 @@ const LeftSideFilter = () => {
           </Typography>
 
           {/* Slider */}
-          <Box sx={{ width: 250 }}>
+          <Box sx={{ width: '80%' }}>
             <Slider
               value={value}
               min={2000}
@@ -151,17 +151,17 @@ const LeftSideFilter = () => {
         </Typography>
 
         <div className="flex items-center justify-between mt-3 text-gray-400">
-            <div className="flex items-center">
-                <Radio />
-                <label>
-                    <Typography variant="h6">
-                        <p>Non Stop (15)</p>
-                    </Typography>
-                </label>
-            </div>
-            <Typography variant="h6">
-                <p>BDT 3,050</p>
-            </Typography>
+          <div className="flex items-center">
+            <Radio />
+            <label>
+              <Typography variant="h6">
+                <p>Non Stop (15)</p>
+              </Typography>
+            </label>
+          </div>
+          <Typography variant="h6">
+            <p>BDT 3,050</p>
+          </Typography>
         </div>
       </Box>
 
@@ -176,14 +176,14 @@ const LeftSideFilter = () => {
         </Typography>
 
         <div className="mt-3 text-gray-400">
-            <div className="flex items-center">
-                <Radio />
-                <label>
-                    <Typography variant="h6">
-                        <p>20 KG (15)</p>
-                    </Typography>
-                </label>
-            </div>
+          <div className="flex items-center">
+            <Radio />
+            <label>
+              <Typography variant="h6">
+                <p>20 KG (15)</p>
+              </Typography>
+            </label>
+          </div>
         </div>
       </Box>
 
@@ -198,14 +198,14 @@ const LeftSideFilter = () => {
         </Typography>
 
         <div className="mt-3 text-gray-400">
-            <div className="flex items-center">
-                <Radio />
-                <label>
-                    <Typography variant="h6">
-                        <p>Partially Refundable (15)</p>
-                    </Typography>
-                </label>
-            </div>
+          <div className="flex items-center">
+            <Radio />
+            <label>
+              <Typography variant="h6">
+                <p>Partially Refundable (15)</p>
+              </Typography>
+            </label>
+          </div>
         </div>
       </Box>
 
@@ -213,41 +213,139 @@ const LeftSideFilter = () => {
         <hr />
       </div>
 
-       {/* Departing or arriving section */}
-       <Box className="flex justify-start gap-20 items-center">
+      {/* Departing or arriving section */}
+      <Box className="flex justify-start gap-20 items-center">
         <div>
-        <Typography variant="h6">
-          <p className="font-medium">Departing from</p>
-        </Typography>
+          <Typography variant="h6">
+            <p className="font-medium">Departing from</p>
+          </Typography>
 
-        <div className="mt-3 text-gray-400">
+          <div className="mt-3 text-gray-400">
             <div className="flex items-center">
-                <Radio />
-                <label>
-                    <Typography variant="h6">
-                        <p>DAC</p>
-                    </Typography>
-                </label>
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>DAC</p>
+                </Typography>
+              </label>
             </div>
-        </div>
+          </div>
         </div>
         <div>
-        <Typography variant="h6">
-          <p className="font-medium">Arriving at</p>
-        </Typography>
+          <Typography variant="h6">
+            <p className="font-medium">Arriving at</p>
+          </Typography>
 
-        <div className="mt-3 text-gray-400">
+          <div className="mt-3 text-gray-400">
             <div className="flex items-center">
-                <Radio />
-                <label>
-                    <Typography variant="h6">
-                        <p>CGP</p>
-                    </Typography>
-                </label>
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>CGP</p>
+                </Typography>
+              </label>
             </div>
-        </div>
+          </div>
         </div>
       </Box>
+
+      <div className="my-5 border">
+        <hr />
+      </div>
+
+      {/* Airlines Section */}
+      <Box>
+        <div>
+          <Typography variant="h6">
+            <p className="font-medium">Airline</p>
+          </Typography>
+        </div>
+        <div>
+          {/* Biman Bagladesh */}
+          <div className="flex items-center justify-between mt-3 text-gray-400">
+            <div className="flex items-center">
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>Biman Bangladesh Airlines</p>
+                </Typography>
+              </label>
+            </div>
+            <Typography variant="h6">
+              <p>BDT 3,050</p>
+            </Typography>
+          </div>
+          {/* Us Bangla */}
+          <div className="flex items-center justify-between mt-3 text-gray-400">
+            <div className="flex items-center">
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>US Bangla Airlibes</p>
+                </Typography>
+              </label>
+            </div>
+            <Typography variant="h6">
+              <p>BDT 4,050</p>
+            </Typography>
+          </div>
+          {/* Air astra */}
+          <div className="flex items-center justify-between mt-3 text-gray-400">
+            <div className="flex items-center">
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>Air Astra</p>
+                </Typography>
+              </label>
+            </div>
+            <Typography variant="h6">
+              <p>BDT 6,050</p>
+            </Typography>
+          </div>
+          {/* Novo Air */}
+          <div className="flex items-center justify-between mt-3 text-gray-400">
+            <div className="flex items-center">
+              <Radio />
+              <label>
+                <Typography variant="h6">
+                  <p>Novo Air</p>
+                </Typography>
+              </label>
+            </div>
+            <Typography variant="h6">
+              <p>BDT 4,550</p>
+            </Typography>
+          </div>
+        </div>
+      </Box>
+
+      <div className="my-5 border">
+        <hr />
+      </div>
+
+
+      <Box>
+      <div>
+          <Typography variant="h6">
+            <p className="font-medium">Trabsit Time in (Dhaka - Chittagong)</p>
+          </Typography>
+        </div>
+        <div className="mt-3 text-gray-400">
+          <div className="flex items-center">
+            <Radio />
+            <label>
+              <Typography variant="h6">
+                <p>No Transit (15)</p>
+              </Typography>
+            </label>
+          </div>
+        </div>
+      </Box>
+
+
+      {/* Button Section */}
+      <button className="border border-red-500 w-full py-4 rounded-lg text-red-500 font-medium my-10 text-xl hover:bg-red-500 hover:text-white duration-500">Clear Filter</button>
     </Box>
   );
 };
