@@ -11,14 +11,14 @@ const Home = () => {
       <div className="max-w-[1450px] mx-auto my-5">
         <TopFilter />
         <main>
-          <div className="flex gap-5 mt-16">
+          <div className="flex flex-col lg:flex-row gap-5 mt-16">
             {/* left side filter */}
-            <div className="w-[30%] bg-white rounded-xl p-5 shadow-md h-fit">
+            <div className="lg:w-[30%] bg-white rounded-xl p-5 shadow-md h-fit">
               <LeftSideFilter />
             </div>
 
             {/* Ticket section */}
-            <div className="w-[70%] px-5">
+            <div className="lg:w-[70%] px-5">
               <AirlinesTicket />
             </div>
           </div>

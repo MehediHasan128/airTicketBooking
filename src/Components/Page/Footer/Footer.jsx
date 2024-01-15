@@ -16,10 +16,10 @@ import google from '../../../assets/footerImages/google-logo.svg';
 const Footer = () => {
   return (
     <>
-      <Box className="pt-36 pb-16">
+      <Box className="pt-36 pb-16 px-10 lg:px-0">
         <Box className="w-full mb-10">
-          <div className="flex justify-between">
-            <div className="w-[20%]">
+          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
+            <div className="w-[80%] lg:w-[20%]">
               <img className="w-[60%]" src={logo} alt="" />
               <Typography variant="body1">
                 <p className="mt-2 text-red-600 text-justify">
@@ -147,7 +147,7 @@ const Footer = () => {
                 </Typography>
               </div>
             </div>
-            <div className="w-[20%]">
+            <div className="w-[80%] lg:w-[20%]">
               <Typography variant="h6">
                 <p className="font-sembold">Accepted Payments</p>
               </Typography>
@@ -160,7 +160,7 @@ const Footer = () => {
         </Box>
 
         <Divider variant="middle" />
-        <Box className="flex justify-center gap-36 my-10">
+        <Box className="flex flex-wrap justify-center gap-36 my-10">
             <div className="w-fit">
                 <Typography variant="body1">
                     <p className="font-semibold text-center mb-2">Accredited Member</p>
