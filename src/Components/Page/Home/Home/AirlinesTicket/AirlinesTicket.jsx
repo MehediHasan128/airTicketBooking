@@ -30,7 +30,7 @@ const AirlinesTicket = () => {
             <p className="font-semibold">Cheapest</p>
           </Typography>
           <Typography variant="body1">
-            <p>To get the cheapest available flights</p>
+            <p className="hidden md:flex">To get the cheapest available flights</p>
           </Typography>
         </div>
         <Divider orientation="vertical" variant="middle" flexItem />
@@ -39,7 +39,7 @@ const AirlinesTicket = () => {
             <p className="font-semibold">Shortest</p>
           </Typography>
           <Typography variant="body1">
-            <p>To get the shortest available flights</p>
+            <p className="hidden md:flex">To get the shortest available flights</p>
           </Typography>
         </div>
       </Box>
