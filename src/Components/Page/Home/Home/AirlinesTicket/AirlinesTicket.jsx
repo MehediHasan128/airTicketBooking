@@ -10,13 +10,13 @@ import novo from "../../../../../assets/images/novo.png";
 const AirlinesTicket = () => {
   return (
     <div>
-      <Box className="w-[80%] mx-auto">
+      <Box className="lg:w-[80%] mx-auto">
         <div className="flex items-center justify-between">
           <Typography variant="h3">
             <BiSolidLeftArrow className="text-red-500" />
           </Typography>
           <Typography variant="h4">
-            <p>Flight from Dhaka to Chittagong</p>
+            <p className="text-xl md:text-3xl">Flight from Dhaka to Chittagong</p>
           </Typography>
           <Typography variant="h3">
             <BiSolidRightArrow className="text-red-500" />

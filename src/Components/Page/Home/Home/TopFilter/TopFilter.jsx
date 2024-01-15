@@ -15,7 +15,7 @@ const TopFilter = () => {
   return (
     <div>
       <>
-        <Box className="bg-white px-10 py-3 pb-10 lg:pb-8 rounded-xl shadow-md relative">
+        <Box className="bg-white px-5 md:px-10 py-3 pb-10 lg:pb-8 rounded-xl shadow-md relative">
             {/* Radio group section */}
           <Box>
             <FormControl>
@@ -99,12 +99,12 @@ const TopFilter = () => {
                   </Typography>
                 </div>
               </div>
-              <div className="w-fit border p-2 rounded-full bg-white shadow-md absolute top-7 lg:top-5 left-[41%] lg:left-[46%]">
+              <div className="w-fit border p-2 rounded-full bg-white shadow-md absolute top-7 md:top-5 left-[41%] md:left-[43.5%] lg:left-[46%]">
                 <PiArrowsLeftRightLight className="text-2xl lg:text-4xl text-red-600" />
               </div>
             </Box>
             <Box>
-              <div className="flex flex-col lg:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <div className="flex items-center justify-between gap-10 border px-5 py-3 rounded-lg text-gray-600">
                   <div>
                     <Typography variant="body1">
@@ -198,7 +198,7 @@ const TopFilter = () => {
             </div>
           </Box>
 
-          <Box className="absolute left-[32%] lg:left-[42%] -bottom-6">
+          <Box className="absolute left-[32%] md:left-[40%] lg:left-[42%] -bottom-6">
           <button className="px-5 py-3 bg-red-600 rounded-md text-lg font-medium text-white">Modify Search</button>
           </Box>
         </Box>
