@@ -16,7 +16,9 @@ const AirlinesTicket = () => {
             <BiSolidLeftArrow className="text-red-500" />
           </Typography>
           <Typography variant="h4">
-            <p className="text-xl md:text-3xl">Flight from Dhaka to Chittagong</p>
+            <p className="text-xl md:text-3xl">
+              Flight from Dhaka to Chittagong
+            </p>
           </Typography>
           <Typography variant="h3">
             <BiSolidRightArrow className="text-red-500" />
@@ -30,7 +32,9 @@ const AirlinesTicket = () => {
             <p className="font-semibold">Cheapest</p>
           </Typography>
           <Typography variant="body1">
-            <p className="hidden md:flex">To get the cheapest available flights</p>
+            <p className="hidden md:flex">
+              To get the cheapest available flights
+            </p>
           </Typography>
         </div>
         <Divider orientation="vertical" variant="middle" flexItem />
@@ -39,7 +43,9 @@ const AirlinesTicket = () => {
             <p className="font-semibold">Shortest</p>
           </Typography>
           <Typography variant="body1">
-            <p className="hidden md:flex">To get the shortest available flights</p>
+            <p className="hidden md:flex">
+              To get the shortest available flights
+            </p>
           </Typography>
         </div>
       </Box>
@@ -47,31 +53,31 @@ const AirlinesTicket = () => {
       <Box className="space-y-5">
         <TicketCard
           ticketPrice={"3,202"}
-          airliensName={'Biman Bangladesh Airlines'}
+          airliensName={"Biman Bangladesh Airlines"}
           airlineLogo={biman}
           time={"45 minutes"}
         />
         <TicketCard
           ticketPrice={"4,502"}
-          airliensName={'Biman Bangladesh Airlines'}
+          airliensName={"Biman Bangladesh Airlines"}
           airlineLogo={biman}
           time={"45 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
-          airliensName={'US Bangla Airlines'}
+          airliensName={"US Bangla Airlines"}
           airlineLogo={usBangla}
           time={"1 hour 20 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
-          airliensName={'AirAstra'}
+          airliensName={"AirAstra"}
           airlineLogo={airAstra}
           time={"1 hour 20 minutes"}
         />
         <TicketCard
           ticketPrice={"2,500"}
-          airliensName={'NovoAir'}
+          airliensName={"NovoAir"}
           airlineLogo={novo}
           time={"1 hour 20 minutes"}
         />
@@ -82,7 +88,7 @@ const AirlinesTicket = () => {
           <Button>
             <MdKeyboardArrowLeft className="text-xl" />
           </Button>
-          <Button sx={{backgroundColor: 'red', color: 'white'}}>1</Button>
+          <Button sx={{ backgroundColor: "red", color: "white" }}>1</Button>
           <Button>2</Button>
           <Button>
             <MdKeyboardArrowRight className="text-xl" />
